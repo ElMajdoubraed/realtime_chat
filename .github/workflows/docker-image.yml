@@ -35,6 +35,8 @@ jobs:
       env:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+        #echo "$MY_PASSWORD" | docker login --username foo --password-stdin
+      
       run: |
-        docker login -u $DOCKER_USER -p $$DOCKER_TOKEN --password-stdin
+        docker login -u $DOCKER_USER -p $DOCKER_TOKEN --password-stdin
         docker push raeddocker123/chat_socket_app:1.0
