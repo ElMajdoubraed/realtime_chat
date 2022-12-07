@@ -21,7 +21,7 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
-    image: myapp-client
+    image: raeddocker123/chat_socket_app:1.0
     container_name: myapp-react-client
     #volumes:
       #- ./nginx/conf.d:/etc/nginx/conf.d
