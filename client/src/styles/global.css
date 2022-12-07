@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    background: radial-gradient(closest-side,#222224,#121314);
+}
+  
+.title{
+    color: #dbdbdd;
+    font-weight: 550;
+}
+
+.label{
+    color: #dbdbdd;
+}
+
+.input{
+    color: #dbdbdd;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #121314;
+    border: 0px none;
+    padding: 20px;
+}
+
+.card-login{
+    background-color:#2c2c2e;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.textarea{
+    color: #dbdbdd !important;
+    width: 100%;
+    height: 40px !important;
+    border-radius: 10px;
+    background-color: #121314 !important;
+    border: 0px none;
+    padding: 20px !important;
+}
+
+
+.flesh-button{
+    background-color: transparent;
+    border: 0px none !important;
+    outline: none !important;
+    color: #dbdbdd;
+}
+.flesh-button:hover{
+    background-color: transparent !important;
+    border: 0px none !important;
+    outline: none !important;
+    color: #dbdbdd;
+}
+.rounded-style{
+    border-radius: 10px 0px 10px 0px;
+}
+
+.styled-message{
+    color: #dbdbdd;
+    background-color:#2c2c2e;
+}
