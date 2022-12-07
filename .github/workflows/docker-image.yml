@@ -8,11 +8,33 @@ on:
 
 jobs:
 
+  run-local:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: run docker compose locally
+      run: docker-compose up --force-recreate -d
+      
   build:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
-    - name: build docker compose
-      run: docker-compose up --force-recreate -d
+    - name: docker build
+      run: docker build . -t raeddocker123/chat_socket_app:1.0
+
+  push:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: docker push to dockerhub repositry
+      env:
+        DOCKER_USER: ${{ secrets.DOCKER_USER }}
+        DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+      run: |
+        docker login -u $DOCKER_USER -p $$DOCKER_TOKEN
+        docker push raeddocker123/chat_socket_app:1.0
