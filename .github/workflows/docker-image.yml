@@ -39,4 +39,5 @@ jobs:
       run: |
         docker-compose build
         echo "$DOCKER_TOKEN" | docker login --username $DOCKER_USER --password-stdin
-        docker push raeddocker123/chat_socket_app:1.0
+        docker push raeddocker123/chat_socket_app:client
+        docker push raeddocker123/chat_socket_app:server
