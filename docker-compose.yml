@@ -5,7 +5,7 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-    image: raeddocker123/chat_socket_app:1.0
+    image: raeddocker123/chat_socket_app:server
     container_name: myapp-node-server
     command: nodemon start
     volumes:
@@ -21,7 +21,7 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
-    image: raeddocker123/chat_socket_app:1.0
+    image: raeddocker123/chat_socket_app:client
     container_name: myapp-react-client
     #volumes:
       #- ./nginx/conf.d:/etc/nginx/conf.d
