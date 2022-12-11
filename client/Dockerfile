@@ -11,10 +11,13 @@ COPY . .
 
 RUN npm run build
 
-FROM nginx
+EXPOSE 3000
 
-WORKDIR /usr/src/app
+CMD [ "npm","run", "start" ]
+#FROM nginx
 
-COPY --from=0 /usr/src/app/build ./
-RUN chown -R nginx:nginx /usr/src/app
-VOLUME /usr/src/app
+#WORKDIR /usr/src/app
+
+#COPY --from=0 /usr/src/app/build ./
+#RUN chown -R nginx:nginx /usr/src/app
+#VOLUME /usr/src/app
